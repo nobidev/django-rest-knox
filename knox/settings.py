@@ -10,6 +10,7 @@ DEFAULTS = {
     'SECURE_HASH_ALGORITHM': 'cryptography.hazmat.primitives.hashes.SHA512',
     'AUTH_TOKEN_CHARACTER_LENGTH': 64,
     'TOKEN_TTL': timedelta(hours=10),
+    'USER_MODEL': None,
     'USER_SERIALIZER': None,
     'TOKEN_LIMIT_PER_USER': None,
     'AUTO_REFRESH': False,
