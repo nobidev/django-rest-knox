@@ -20,7 +20,7 @@ class AuthTokenManager(models.Manager):
         if context and 'knox_data' in context:
             data = context['knox_data']
 
-        instance = super(AuthTokenManager, self).create(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH], digest=digest, user=user, expiry=expiry, data=data)
+        instance = super(AuthTokenManager, self).create(token_key=token[:CONSTANTS.TOKEN_KEY_LENGTH], digest=digest, user_id=user.id, expiry=expiry, data=data)
         return instance, token
 
 
